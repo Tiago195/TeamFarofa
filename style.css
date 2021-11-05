@@ -87,6 +87,9 @@ a:hover {
 .teste {
   margin: 10px auto;
   background-color: black;
+  background-image: url(./imgs/fundoo.png);
+  background-size: cover;
+  background-position: center;
   width: 95%;
   height: 480px;
   border-radius: 10px;
@@ -95,43 +98,33 @@ a:hover {
   position: relative;
 }
 
-.btn {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: rotateY(-50%);
-}
-
 .teste-container {
-  /* background-color: white; */
   width: calc(9*250px);
   height: 95%;
   display: flex;
-  /* gap: 20px; */
   justify-content: space-evenly;
-  /* transform: translateX(-40px); */
+  align-items: flex-end;
   transition: .5s;
+  position: relative;
+  padding-left: 36px;
 }
 
 .teste-select {
-  background-color: rgb(202, 202, 202);
+  background-color: rgb(255, 0, 0);
   width: 250px;
   height: 100%;
-  transition: .2s;
-  /* opacity: 80%; */
-  /* box-shadow: 0 0 10px red; */
-}
-
-.selecionado {
-  /* opacity: 80%; */
-  background-color: rgb(230, 230, 230);
-  box-shadow: 0 0 10px white;
-  transform: scale(1.05);
+  /* transition: .2s; */
 }
 
 .not-selecionado {
-  opacity: 80%;
   box-shadow: none;
+  filter: grayscale(90%);
+}
+
+.selecionado {
+  background-color: rgb(230, 230, 230);
+  box-shadow: 0 0 10px white;
+  transform: scale(1.05);
 }
 
 input {
@@ -141,10 +134,46 @@ input {
 #tutu {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  position: absolute;
+  right: 220px;
+  bottom: 14px;
+  padding: 5px 40px;
+}
+
+.not-comfirmado {
+  transform: scale(0);
+}
+
+.comfirmado {
+  background-color: #333940;
+  animation: animacao .5s;
+  transform: scale(1);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+:root{
+  --position: 12px;
+}
+
+@keyframes animacao {
+  0% {
+    left: var(--position);
+  }
+  100% {
+    left: 36px;
+  }
 }
 
 label {
-  /* display: inline-block; */
+  display: none;
+  display: inline-block;
   margin: 20px 5px;
   width: 60px;
   height: 10px;
@@ -165,6 +194,6 @@ label:hover {
   transform: translateX(-88vw);
 }
 
-.teste-select:nth-child(1) {
+/* .teste-select:nth-child(1) {
   background-color: #c07766;
-}
+} */
