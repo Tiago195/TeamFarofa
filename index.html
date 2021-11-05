@@ -16,18 +16,40 @@
   </head>
   <body>
     <header class="header-bar">
-      <img src="logo.png" alt="logo" />
-      <nav>
+      <div id="sla">
+        <img src="20211104_1121442.gif" alt="logo" />
+      </div>
+      <!-- <nav>
         <ul>
           <li><a href="#">Breno Santos</a></li>
           <li><a href="#">Tiago Meireles</a></li>
           <li><a href="#">João Castanheira</a></li>
+          <li><a href="#">Gabriela Ferraz</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
+    <!-- <button class="btn" onclick="ladinho()">→</button> -->
+    <section class="teste">
+      <input type="radio" name="botao" id="botao1">
+      <input type="radio" name="botao" id="botao2">
+      <div class="teste-container">
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+        <div class="teste-select"></div>
+      </div>
+      <div id="tutu">
+        <label for="botao1"></label>
+        <label for="botao2"></label>
+      </div>
+    </section>
     <main class="main">
       <section class="texto">
-        <h2>Seu nome:</h2>
+        <h2>Tiago Meireles</h2>
         <p>
           Informaçoes sobre o projeto <br />
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
@@ -46,11 +68,33 @@
       <section class="trybe">
         <label for="select-project">Escolha um projeto:</label>
         <select name="projetos" id="select-project">
-          <option value="sla">opçcoes aqui</option>
+          <option value="playground-functions">project-playground-functions</option>
+          <option value="pixels-art">project-pixels-art</option>
+          <option value="todo-list">project-todo-list</option>
+          <option value="color-guess">project-color-guess</option>
+          <option value="mistery-letter">project-mistery-letter</option>
+          <option value="meme-generator">project-meme-generator</option>
         </select>
+        <section >
+          <iframe src="" id="todos-projetos" frameborder="0"></iframe>
+        </section>
       </section>
-    </main>
 
+      <!-- Team Farofa:
+      Tiago 
+      breno
+      gabi
+      castanheira
+      ruy
+      yang?
+      vinicius?
+      marcos?
+      samuca?
+
+      
+      -->
+    </main>
     <footer> <h2>sua redes sociais</h2></footer>
+    <script src="script.js"></script>
   </body>
 </html>
