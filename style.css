@@ -2,27 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Press Start 2P', sans-serif;;
+}
+
+body {
+  background-image: url(/assets/img/aleksandra-khomenko-menu-bg.jpg);
+  background-size: cover;
 }
 
 .header-bar {
   padding: 10px 50px;
   display: flex;
   justify-content: space-between;
-  background-color: #e9edf5;
+  background-color: #00000044;
   align-items: center;
 }
 
-.header-bar img {
-  width: 200px;
-  transform: translateY(-30px);
+.header-bar h2 {
+  padding: 10px;
+  color: gold;
+  text-shadow: rgb(0, 0, 0) 0px 0px 3px;
 }
 
-#sla {
-  height: 20px;
-  overflow: hidden;
-  background-color: #333940;
-  border-radius: 5px;
+a {
+  color: #333940;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #404e5f;
 }
 
 ul {
@@ -30,19 +38,6 @@ ul {
   gap: 20px;
   align-items: center;
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  padding: 10px;
-  background-color: #eb937f;
-  border-radius: 3px;
-  color: #333940;
-  box-shadow: 1px 1px 3px #414952;
-}
-
-a:hover {
-  background-color: #c07766;
 }
 
 .main {
@@ -60,9 +55,8 @@ a:hover {
   color: #333940;
 }
 
-.texto h2 {
-  margin-bottom: 10px;
-  color: #333940;
+.texto img {
+  width: 500px;
 }
 
 .trybe {
@@ -104,11 +98,11 @@ a:hover {
 
 .teste-container {
   /* background-color: white; */
-  width: calc(9*250px);
+  width: 2450px;
   height: 95%;
   display: flex;
   /* gap: 20px; */
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* transform: translateX(-40px); */
   transition: .5s;
 }
@@ -143,17 +137,17 @@ input {
   justify-content: center;
 }
 
-label {
+#tutu label {
   /* display: inline-block; */
   margin: 20px 5px;
   width: 60px;
   height: 10px;
   border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
+  border-radius: 1px;
   cursor: pointer;
 }
 
-label:hover {
+#tutu label:hover {
   background-color: rgb(255, 0, 255);
 }
 
@@ -167,4 +161,38 @@ label:hover {
 
 .teste-select:nth-child(1) {
   background-color: #c07766;
+}
+.img-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 500px;
+  height: 250px;
+}
+
+.img-section img {
+  display: flex;
+  width: 100px;
+  height: 90px;
+  flex-shrink: 0;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.img-section h5 {
+  display: flex;
+}
+
+.h2-name {
+  display: flex;
+  width: 300px;
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.icon-pos {
+  display: flex;
+  align-self: center;
 }
