@@ -1,8 +1,10 @@
 const player = document.querySelector(".player-container");
 const texto = document.querySelector('.texto-container');
+
 const root = document.documentElement;
 
 player.addEventListener("dblclick", (e) => {
+  const tt = e.target.dataset.texto;
   if (
     e.target.classList.contains("player") &&
     !e.target.classList.contains("comfirmado")
@@ -12,6 +14,7 @@ player.addEventListener("dblclick", (e) => {
       i.classList.add("not-comfirmado");
     }
     e.target.classList.remove("not-comfirmado");
+    document.querySelector(`.${tt}`).style.display = 'block'
     root.style.setProperty(
       "--x",
       `${-e.target.getBoundingClientRect().x + 100}px`
@@ -23,6 +26,7 @@ player.addEventListener("dblclick", (e) => {
       e.target.classList.toggle("comfirmado");
     } else {
       // e.target.classList.add('reiniciar-comfirmado');
+      document.querySelector(`.${tt}`).style.display = 'none'
       texto.classList.remove('teste')
       for (let i of player.children) {
         i.classList.remove("not-comfirmado");
